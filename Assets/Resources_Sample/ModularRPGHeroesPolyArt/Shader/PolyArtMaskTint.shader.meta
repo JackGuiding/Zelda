@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e1b5fb81c0beba1499b4614f1619640d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Shader/PolyArtMaskTint.shader
+  uploadId: 544885

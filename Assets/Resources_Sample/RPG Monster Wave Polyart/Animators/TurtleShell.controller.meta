@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4c4d36805ba940bdadeeb132fe032166
+timeCreated: 1573562086
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/TurtleShell.controller
+  uploadId: 634943

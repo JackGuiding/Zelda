@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7afe9c7d04508834f9dc3e71830eff3a
+timeCreated: 1546305508
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/TPController/material/Ground.mat
+  uploadId: 544885

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ff605a9ad41a43458cc70bab695128c7
+timeCreated: 1573451265
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/Dragon.controller
+  uploadId: 634943

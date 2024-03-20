@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d77b6029d635492bbbacdb94aaba2c55
+timeCreated: 1573529707
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/Skeleton.controller
+  uploadId: 634943

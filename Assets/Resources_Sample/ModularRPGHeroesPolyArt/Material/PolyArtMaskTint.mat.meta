@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 67ba5db7871968141908f7c263241b5c
+timeCreated: 1548772154
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Material/PolyArtMaskTint.mat
+  uploadId: 544885

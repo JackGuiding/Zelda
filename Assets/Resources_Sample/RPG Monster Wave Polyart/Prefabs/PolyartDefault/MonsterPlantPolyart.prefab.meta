@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 612e75ef8d3c46fda04e68ad34f4e820
+timeCreated: 1581590965
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Prefabs/PolyartDefault/MonsterPlantPolyart.prefab
+  uploadId: 634943

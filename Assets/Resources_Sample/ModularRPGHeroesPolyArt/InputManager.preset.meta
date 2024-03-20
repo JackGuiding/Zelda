@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ad5d3a67d1b9b684fb80197bc615f11c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/InputManager.preset
+  uploadId: 544885

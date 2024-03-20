@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 427207f9c87461d4fae2d1419f77441d
+timeCreated: 1548675376
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Hammer01.prefab
+  uploadId: 544885

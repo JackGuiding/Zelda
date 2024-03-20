@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PolyartMaskTint03
+  m_Shader: {fileID: 4800000, guid: e64ac44f4a6146a9999ba8282e7d39c3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 7f6661a82fda47f59bd955045e7e1930, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 2306c1db2faf4b4cb5839d574d7edabc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 76850db1bea2f9d40bff7c23c89a709f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask01:
+        m_Texture: {fileID: 2800000, guid: 3f93f6b09b1b4080860da29a7a9f9b86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask02:
+        m_Texture: {fileID: 2800000, guid: 04bbdeeead1a4a74b888c30c61ed13d6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask03:
+        m_Texture: {fileID: 2800000, guid: 62397dd288c240108bd0025b1bbb90d9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmoothness:
+        m_Texture: {fileID: 2800000, guid: 817f964f4c074d1dbc50164fcc496a20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SAM:
+        m_Texture: {fileID: 2800000, guid: 9f9105e8376161f4bb30dc3a8b32b1ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Brightness: 1.2
+    - _Color01Power: 5
+    - _Color02Power: 9.5
+    - _Color03Power: 6
+    - _Color04Power: 5.7
+    - _Color05Power: 9.4
+    - _Color06Power: 6.3
+    - _Color07Power: 6.5
+    - _Color08Power: 7.1
+    - _Color09Power: 6.7
+    - __dirty: 1
+    m_Colors:
+    - _Color01: {r: 0.3729707, g: 0.15806337, b: 0.9056604, a: 0}
+    - _Color02: {r: 0.53992397, g: 0.132921, b: 0.9716981, a: 0}
+    - _Color03: {r: 0.253366, g: 0.056737285, b: 0.7075472, a: 0}
+    - _Color04: {r: 0.6216712, g: 0.27634388, b: 0.8490566, a: 0}
+    - _Color05: {r: 0.4045035, g: 0.21106264, b: 0.8773585, a: 0}
+    - _Color06: {r: 0.2084171, g: 0, b: 0.8396226, a: 0}
+    - _Color07: {r: 0.60382915, g: 0.16509432, b: 1, a: 0}
+    - _Color08: {r: 0.35849056, g: 0.35849056, b: 0.35849056, a: 0}
+    - _Color09: {r: 0.30576372, g: 0.18609823, b: 0.7735849, a: 0}
+    - _EmissionPower: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
+  m_BuildTextureStacks: []

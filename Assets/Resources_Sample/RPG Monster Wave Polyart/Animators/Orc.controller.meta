@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3a071ffe067e4ac2b79f4de994579d9d
+timeCreated: 1573528809
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/Orc.controller
+  uploadId: 634943

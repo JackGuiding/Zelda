@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b3011717a687d584499b55a186482f03
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/SRP/HowToTestSRPs.txt
+  uploadId: 544885

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e94e89749cd4cd848985188948acb5ed
+timeCreated: 1548675359
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Bow02.prefab
+  uploadId: 544885

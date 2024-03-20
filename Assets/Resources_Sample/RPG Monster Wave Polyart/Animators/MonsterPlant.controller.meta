@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b6b4b061e5dd48afb521631380db5ba8
+timeCreated: 1573526712
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/MonsterPlant.controller
+  uploadId: 634943

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f6f9c536e9cc40959dfb9d425736e0ec
+timeCreated: 1573560057
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/Slime.controller
+  uploadId: 634943

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e46b1dc4941ed174e87f172cb5e65374
+timeCreated: 1548293226
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Material/PolyArtMat.mat
+  uploadId: 544885

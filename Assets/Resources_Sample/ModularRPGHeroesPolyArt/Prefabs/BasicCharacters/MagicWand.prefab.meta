@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b272a95b479562d4b89ca0aa80683e09
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/BasicCharacters/MagicWand.prefab
+  uploadId: 544885

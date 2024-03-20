@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 222b9cdbe09c4f44839a84738cd8f77d
+timeCreated: 1573561113
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Animators/Spider.controller
+  uploadId: 634943

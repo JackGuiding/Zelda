@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 81e1363bc43c09441bd11058ee979236
+timeCreated: 1548673504
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Arrow02.prefab
+  uploadId: 544885

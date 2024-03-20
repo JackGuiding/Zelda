@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e00dd25a1ba7401e9abc39993ab68f80
+timeCreated: 1581591161
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Prefabs/PolyartDefault/SpiderPolyart.prefab
+  uploadId: 634943

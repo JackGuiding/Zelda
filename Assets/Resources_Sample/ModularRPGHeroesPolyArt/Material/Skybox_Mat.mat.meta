@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dd12ddc72d8f80b498259730bb39d7f4
+timeCreated: 1577363094
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Material/Skybox_Mat.mat
+  uploadId: 544885

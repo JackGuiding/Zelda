@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 13e8a40fcc98c954fba784b9b12d5360
+timeCreated: 1548675632
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Wand01.prefab
+  uploadId: 544885

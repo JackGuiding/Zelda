@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 44ea1039a49739d4c9470119f521dcac
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/CharacterBaseForExternalAnimations/SwordAndShield.prefab
+  uploadId: 544885

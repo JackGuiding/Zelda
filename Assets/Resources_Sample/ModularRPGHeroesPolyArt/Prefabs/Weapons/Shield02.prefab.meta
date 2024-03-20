@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e508085003e9aff4688f466cce07a128
+timeCreated: 1548675402
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Shield02.prefab
+  uploadId: 544885

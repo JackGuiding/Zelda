@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b63bd109d6ead94dbae3e45d7382456
+timeCreated: 1552019136
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Animations/MagicWand/ForAnimationLayers/MWRunning.controller
+  uploadId: 544885

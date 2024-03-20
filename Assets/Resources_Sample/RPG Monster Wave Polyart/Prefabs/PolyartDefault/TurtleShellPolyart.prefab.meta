@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 59b47be0240649c4892ad79c72662bb1
+timeCreated: 1581591198
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Prefabs/PolyartDefault/TurtleShellPolyart.prefab
+  uploadId: 634943

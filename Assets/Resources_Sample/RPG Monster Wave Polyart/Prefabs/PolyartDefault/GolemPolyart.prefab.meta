@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ffddcbf899f441a89e27cbfa4db5c845
+timeCreated: 1581590912
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157652
+  packageName: RPG Monster Wave Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPG Monster Wave Polyart/Prefabs/PolyartDefault/GolemPolyart.prefab
+  uploadId: 634943

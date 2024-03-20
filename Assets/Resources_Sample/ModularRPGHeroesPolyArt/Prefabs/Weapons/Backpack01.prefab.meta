@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2cd21688623d5a74eb7b93907128a980
+timeCreated: 1548673540
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Backpack01.prefab
+  uploadId: 544885

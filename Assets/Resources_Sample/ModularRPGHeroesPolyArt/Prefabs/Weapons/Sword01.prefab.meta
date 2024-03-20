@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7f28966cc46a46419ed66aff96f2411
+timeCreated: 1548675473
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138600
+  packageName: Modular RPG Hero Polyart
+  packageVersion: 1.5
+  assetPath: Assets/ModularRPGHeroesPolyArt/Prefabs/Weapons/Sword01.prefab
+  uploadId: 544885
