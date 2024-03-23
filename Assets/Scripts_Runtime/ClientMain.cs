@@ -7,21 +7,26 @@ namespace Zelda {
     public class ClientMain : MonoBehaviour {
 
         ModuleInput input;
+        ModuleAssets assets;
 
-        [SerializeField] RoleEntity role;
+        GameContext gameContext;
 
         void Awake() {
 
             // ==== Phase: Instantiate ====
             input = new ModuleInput();
+            assets = new ModuleAssets();
+
+            gameContext = new GameContext();
 
             // ==== Phase: Inject ====
+            gameContext.Inject(input, assets);
 
             // ==== Phase: Init ====
+            assets.Load();
 
             // ==== Phase: Enter Game ====
-
-            Debug.Log("Hello");
+            BusinessGame.Enter(gameContext);
 
             Application.targetFrameRate = 120;
 
@@ -60,26 +65,8 @@ namespace Zelda {
         void FixedTick(float dt) {
 
             // ==== Phase: Logic ====
-            role.Move(input.moveAxis, dt);
-            role.Face(input.moveAxis, dt);
-            // 通过射线检测地面
-            RaycastHit[] hits = Physics.RaycastAll(role.transform.position + Vector3.up, Vector3.down, 1.05f);
-            Debug.DrawRay(role.transform.position + Vector3.up, Vector3.down * 1.05f, Color.red);
-            Debug.Log(role.isGrounded + " " + hits.Length);
-            if (hits != null) {
-                for (int i = 0; i < hits.Length; i += 1) {
-                    var hit = hits[i];
-                    if (hit.collider.CompareTag("Ground")) {
-                        role.SetGround(true);
-                        break;
-                    }
-                }
-            }
-            role.Jump(input.isJump);
-            if (input.isAttack) {
-                role.Anim_Attack();
-            }
-
+            BusinessGame.FixedTick(gameContext, dt);
+            
             // ==== Phase: Simulate ====
             Physics.Simulate(dt); // rb.position += rb.velocity * dt;
 

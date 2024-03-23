@@ -3,7 +3,13 @@ using UnityEngine;
 
 namespace Zelda {
 
+    // 类 = 蓝图 = 设计图纸
+    // 水杯的图纸不能装水
+    // 水杯可以装水
+    // 水杯是通过设计图纸设计出来的, 术语称水杯为"实例", 过程(new)称为"实例化"
     public class RoleEntity : MonoBehaviour {
+
+        public int id;
 
         [SerializeField] Rigidbody rb;
         [SerializeField] Transform bodyTF;
@@ -20,10 +26,13 @@ namespace Zelda {
 
         public bool isGrounded;
 
+        public Action<RoleEntity, Collision> OnCollisionEnterHandle;
+
         public void Ctor() { }
 
         public void Move(Vector2 moveAxis, float dt) {
             Move(moveAxis, speed, dt);
+            isGrounded = true;
 
             // Animation
             if (moveAxis != Vector2.zero) {
@@ -99,6 +108,38 @@ namespace Zelda {
             velo.y = oldY;
             rb.velocity = velo;
 
+        }
+
+        // ==== 只会触发一种, 要么硬要么软 ====
+        // 硬碰撞
+        // void OnCollisionEnter2D(Collision2D other) {} // 2D 版本
+
+        void OnCollisionEnter(Collision other) {
+            // Debug.Log("OnCollisionEnter");
+            OnCollisionEnterHandle.Invoke(this, other);
+        }
+
+        void OnCollisionStay(Collision other) {
+            // Debug.Log("OnCollisionStay");
+        }
+
+        void OnCollisionExit(Collision other) {
+            // Debug.Log("OnCollisionExit");
+        }
+
+        // 软交叉
+        // void OnTriggerEnter2D(Collider2D other) {} // 2D 版本
+
+        void OnTriggerEnter(Collider other) {
+            // Debug.Log("OnTriggerEnter");
+        }
+
+        void OnTriggerStay(Collider other) {
+            // Debug.Log("OnTriggerStay");
+        }
+
+        void OnTriggerExit(Collider other) {
+            // Debug.Log("OnTriggerExit");
         }
 
     }
