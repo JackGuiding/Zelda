@@ -13,6 +13,9 @@ namespace Zelda {
         }
 
         static void OnCollisionEnter(RoleEntity role, Collision other) {
+            if (other.gameObject.CompareTag("Ground")) {
+                role.SetGround(true);
+            }
         }
 
     }

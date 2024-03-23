@@ -32,7 +32,6 @@ namespace Zelda {
 
         public void Move(Vector2 moveAxis, float dt) {
             Move(moveAxis, speed, dt);
-            isGrounded = true;
 
             // Animation
             if (moveAxis != Vector2.zero) {
