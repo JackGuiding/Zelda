@@ -38,19 +38,7 @@ namespace Zelda {
             float dt = Time.deltaTime;
 
             // ==== Phase: Process Input ====
-            Vector2 moveAxis = Vector2.zero;
-            if (Input.GetKey(KeyCode.W)) {
-                moveAxis.y = 1;
-            } else if (Input.GetKey(KeyCode.S)) {
-                moveAxis.y = -1;
-            }
-
-            if (Input.GetKey(KeyCode.A)) {
-                moveAxis.x = -1;
-            } else if (Input.GetKey(KeyCode.D)) {
-                moveAxis.x = 1;
-            }
-            input.moveAxis = moveAxis;
+            input.Process();
 
             // ==== Phase: Logic ====
             float fixedDT = Time.fixedDeltaTime; // 0.02
@@ -74,6 +62,23 @@ namespace Zelda {
             // ==== Phase: Logic ====
             role.Move(input.moveAxis, dt);
             role.Face(input.moveAxis, dt);
+            // 通过射线检测地面
+            RaycastHit[] hits = Physics.RaycastAll(role.transform.position + Vector3.up, Vector3.down, 1.05f);
+            Debug.DrawRay(role.transform.position + Vector3.up, Vector3.down * 1.05f, Color.red);
+            Debug.Log(role.isGrounded + " " + hits.Length);
+            if (hits != null) {
+                for (int i = 0; i < hits.Length; i += 1) {
+                    var hit = hits[i];
+                    if (hit.collider.CompareTag("Ground")) {
+                        role.SetGround(true);
+                        break;
+                    }
+                }
+            }
+            role.Jump(input.isJump);
+            if (input.isAttack) {
+                role.Anim_Attack();
+            }
 
             // ==== Phase: Simulate ====
             Physics.Simulate(dt); // rb.position += rb.velocity * dt;

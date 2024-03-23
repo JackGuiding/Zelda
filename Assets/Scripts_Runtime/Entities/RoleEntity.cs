@@ -7,6 +7,7 @@ namespace Zelda {
 
         [SerializeField] Rigidbody rb;
         [SerializeField] Transform bodyTF;
+        [SerializeField] Animator anim;
 
         [SerializeField] public float speed;
 
@@ -17,10 +18,36 @@ namespace Zelda {
         Vector3 endForward;
         float duration;
 
+        public bool isGrounded;
+
         public void Ctor() { }
 
         public void Move(Vector2 moveAxis, float dt) {
             Move(moveAxis, speed, dt);
+
+            // Animation
+            if (moveAxis != Vector2.zero) {
+                anim.SetFloat("F_MoveSpeed", rb.velocity.magnitude);
+            } else {
+                anim.SetFloat("F_MoveSpeed", 0);
+            }
+        }
+
+        public void Jump(bool isJumpKeyDown) {
+            if (isJumpKeyDown && isGrounded) {
+                Vector3 velo = rb.velocity;
+                velo.y = 5.5f;
+                rb.velocity = velo;
+                isGrounded = false;
+            }
+        }
+
+        public void SetGround(bool isGrounded) {
+            this.isGrounded = isGrounded;
+        }
+
+        public void Anim_Attack() {
+            anim.SetTrigger("T_Attack");
         }
 
         public void Face(Vector2 moveAxis, float dt) {
@@ -61,11 +88,16 @@ namespace Zelda {
 
         public void Move(Vector2 inputAxis, float speed, float dt) {
 
+            Vector3 velo = rb.velocity;
+            float oldY = velo.y;
+
             Vector3 moveDir = new Vector3(inputAxis.x, 0, inputAxis.y);
             moveDir.Normalize();
 
             // velocity 同时表示速度量和方向
-            rb.velocity = moveDir * speed;
+            velo = moveDir * speed;
+            velo.y = oldY;
+            rb.velocity = velo;
 
         }
 

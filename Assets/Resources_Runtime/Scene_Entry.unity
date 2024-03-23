@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 161420068}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 930405020}
-  - component: {fileID: 937571682}
+  - component: {fileID: 930405021}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1606,6 +1606,28 @@ Transform:
   - {fileID: 930405064}
   m_Father: {fileID: 1095756428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &930405021
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930301628}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 48b54176159440ea9a9adf323fc5b2b6, type: 3}
+  m_Controller: {fileID: 9100000, guid: d88f65c0bd624c0448c479a8b159cdda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &930405022
 Transform:
   m_ObjectHideFlags: 0
@@ -2500,28 +2522,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.3945536, y: -0.20988214, z: 0.15538204}
     m_Extent: {x: 1.2019112, y: 0.9493816, z: 1.3229169}
   m_DirtyAABB: 0
---- !u!95 &937571682
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930301628}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 48b54176159440ea9a9adf323fc5b2b6, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3a071ffe067e4ac2b79f4de994579d9d, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1039127841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,6 +3050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1948291485}
   bodyTF: {fileID: 1095756428}
+  anim: {fileID: 930405021}
   speed: 5
 --- !u!54 &1948291485
 Rigidbody:
