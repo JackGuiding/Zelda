@@ -28,19 +28,13 @@ namespace Zelda {
 
         }
 
-        static void CheckGrounded(RoleEntity role) {
-            RaycastHit[] hits = Physics.RaycastAll(role.transform.position + Vector3.up, Vector3.down, 1.05f);
-            Debug.DrawRay(role.transform.position + Vector3.up, Vector3.down * 1.05f, Color.red);
-            Debug.Log(role.isGrounded + " " + hits.Length);
-            if (hits != null) {
-                for (int i = 0; i < hits.Length; i += 1) {
-                    var hit = hits[i];
-                    if (hit.collider.CompareTag("Ground")) {
-                        role.SetGround(true);
-                        break;
-                    }
-                }
-            }
+        public static void LateTick(GameContext ctx, float dt) {
+
+            // 摄像机跟随
+            ModuleCamera moduleCamera = ctx.moduleCamera;
+            bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity role);
+            moduleCamera.Follow(role.transform.position, 2, 5);
+
         }
 
     }

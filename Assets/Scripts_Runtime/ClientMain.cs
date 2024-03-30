@@ -64,6 +64,7 @@ namespace Zelda {
             }
 
             // ==== Phase: Draw ====
+            LateTick(dt);
 
         }
 
@@ -71,9 +72,16 @@ namespace Zelda {
 
             // ==== Phase: Logic ====
             BusinessGame.FixedTick(gameContext, dt);
-            
+
             // ==== Phase: Simulate ====
             Physics.Simulate(dt); // rb.position += rb.velocity * dt;
+
+        }
+
+        void LateTick(float dt) {
+
+            // ==== Phase: Draw ====
+            BusinessGame.LateTick(gameContext, dt);
 
         }
 

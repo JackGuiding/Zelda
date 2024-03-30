@@ -12,6 +12,10 @@ namespace Zelda {
             this.camera = camera;
         }
 
+        public void Follow(Vector3 targetPos, float height, float radius) {
+            camera.transform.position = new Vector3(targetPos.x, targetPos.y + height, targetPos.z - radius);
+        }
+
     }
 
 }
