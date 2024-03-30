@@ -16,6 +16,44 @@ namespace Zelda {
 
         void Awake() {
 
+            // 旋转角度测试
+            // Vector3 right = Vector3.right;
+            // Vector3 up = Vector3.up;
+            // float ruAngle = Vector3.SignedAngle(right, up, Vector3.forward);
+            // float urAngle = Vector3.SignedAngle(up, right, Vector3.forward);
+            // Debug.Log($"ruAngle: {ruAngle}, urAngle: {urAngle}");
+
+            {
+                Vector3 d = new Vector3(100, 100, 100).normalized;
+                Debug.Log($"A d: {d}");
+
+                Quaternion q = Quaternion.Euler(40, 40, 0);
+                Debug.Log($"A d1: {q * d}");
+
+                Quaternion q1 = Quaternion.Euler(40, 0, 0);
+                Debug.Log($"A d2: {q * q1 * d}");
+
+                Quaternion q2 = Quaternion.Euler(0, 40, 0);
+                Debug.Log($"A d3: {q * q1 * q2 * d}");
+
+                d = q * q1 * q2 * d;
+                Debug.Log($"A res: {d}");
+            }
+
+            {
+                Vector3 d = new Vector3(100, 100, 100).normalized;
+                Debug.Log($"B d: {d}");
+
+                Vector3 d1 = Quaternion.Euler(40, 40, 0) * d;
+                Debug.Log($"B d1: {d1}");
+
+                Vector3 d2 = Quaternion.Euler(0, 40, 0) * d1;
+                Debug.Log($"B d2: {d2}");
+
+                d = Quaternion.Euler(40, 0, 0) * d2;
+                Debug.Log($"res 2: {d}");
+            }
+
             // ==== Phase: Instantiate ====
             input = new ModuleInput();
             assets = new ModuleAssets();

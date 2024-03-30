@@ -30,13 +30,29 @@ namespace Zelda {
 
         public static void LateTick(GameContext ctx, float dt) {
 
-            // 摄像机跟随
+            /* 
+                相机处理:
+                1. 基础: 推拉, 摇, 移, 缩放
+                2. 进阶: 跟随, 看向
+                3. 再进阶: 绕(摇+移+跟+看), 希区柯克式运境, 效果(震屏)
+            */
+
             ModuleCamera moduleCamera = ctx.moduleCamera;
             bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity role);
-            moduleCamera.Follow(role.transform.position, 2, 5);
 
-            // 摄像机旋转
+            // 跟随
+            // moduleCamera.Follow(role.transform.position, new Vector2(-3, 2), 5);
+
+            // 看向
+            // 注: 看向会影响`单纯旋转`, 所以`单纯旋转`必定是失效的
+            // moduleCamera.LookAt(role.transform.position);
+
+            // 单纯旋转
             moduleCamera.Rotate(ctx.input.cameraRotationAxis, dt);
+
+            // 绕
+            // 注: 绕会影响`看向`和`跟随`
+            // moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 5, dt);
 
         }
 
