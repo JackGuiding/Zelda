@@ -30,11 +30,11 @@ namespace Zelda {
 
         public void Ctor() { }
 
-        public void Move(Vector2 moveAxis, float dt) {
+        public void Move(Vector3 moveAxis, float dt) {
             Move(moveAxis, speed, dt);
 
             // Animation
-            if (moveAxis != Vector2.zero) {
+            if (moveAxis != Vector3.zero) {
                 anim.SetFloat("F_MoveSpeed", rb.velocity.magnitude);
             } else {
                 anim.SetFloat("F_MoveSpeed", 0);
@@ -58,16 +58,16 @@ namespace Zelda {
             anim.SetTrigger("T_Attack");
         }
 
-        public void Face(Vector2 moveAxis, float dt) {
+        public void Face(Vector3 moveAxis, float dt) {
 
-            if (moveAxis == Vector2.zero) {
+            if (moveAxis == Vector3.zero) {
                 return;
             }
 
             // 根据正面进行旋转
             // old forward: (x0, y0, z1)
             // new forward: (moveAxis.x, 0, moveAxis.y)
-            Vector3 newForward = new Vector3(moveAxis.x, 0, moveAxis.y).normalized;
+            Vector3 newForward = new Vector3(moveAxis.x, 0, moveAxis.z).normalized;
             if (oldForward != newForward) {
                 startForward = oldForward; // 缓动开始
                 if (startForward == Vector3.zero) {
@@ -94,12 +94,12 @@ namespace Zelda {
 
         }
 
-        public void Move(Vector2 inputAxis, float speed, float dt) {
+        public void Move(Vector3 moveAxis, float speed, float dt) {
 
             Vector3 velo = rb.velocity;
             float oldY = velo.y;
 
-            Vector3 moveDir = new Vector3(inputAxis.x, 0, inputAxis.y);
+            Vector3 moveDir = new Vector3(moveAxis.x, 0, moveAxis.z);
             moveDir.Normalize();
 
             // velocity 同时表示速度量和方向

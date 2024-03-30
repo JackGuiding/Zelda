@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9343d519a443b44aa3df4352644038f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: {fileID: 0}
+  mainCamera: {fileID: 1271179680}
 --- !u!1 &1271179678
 GameObject:
   m_ObjectHideFlags: 0

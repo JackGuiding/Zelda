@@ -6,6 +6,7 @@ namespace Zelda {
 
         public ModuleAssets assets;
         public ModuleInput input;
+        public ModuleCamera moduleCamera;
 
         public RoleRepository roleRepository;
 
@@ -13,9 +14,10 @@ namespace Zelda {
             roleRepository = new RoleRepository();
         }
 
-        public void Inject(ModuleInput input, ModuleAssets assets) {
+        public void Inject(ModuleInput input, ModuleAssets assets, ModuleCamera moduleCamera) {
             this.input = input;
             this.assets = assets;
+            this.moduleCamera = moduleCamera;
         }
     }
 }

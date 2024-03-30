@@ -6,8 +6,11 @@ namespace Zelda {
 
     public class ClientMain : MonoBehaviour {
 
+        [SerializeField] Camera mainCamera;
+
         ModuleInput input;
         ModuleAssets assets;
+        ModuleCamera moduleCamera;
 
         GameContext gameContext;
 
@@ -16,11 +19,13 @@ namespace Zelda {
             // ==== Phase: Instantiate ====
             input = new ModuleInput();
             assets = new ModuleAssets();
+            moduleCamera = new ModuleCamera();
 
             gameContext = new GameContext();
 
             // ==== Phase: Inject ====
-            gameContext.Inject(input, assets);
+            moduleCamera.Inject(mainCamera);
+            gameContext.Inject(input, assets, moduleCamera);
 
             // ==== Phase: Init ====
             assets.Load();
