@@ -9,10 +9,13 @@ namespace Zelda {
         public bool isAttack;
         public bool isJump;
 
+        public Vector2 cameraRotationAxis;
+
         public ModuleInput() { }
 
         public void Process(Quaternion cameraRotation) {
 
+            // ==== 角色移动 ====
             Vector2 moveAxis = Vector2.zero;
             if (Input.GetKey(KeyCode.W)) {
                 moveAxis.y = 1;
@@ -31,9 +34,18 @@ namespace Zelda {
             // 相机面向
             moveCameraDir = cameraRotation * new Vector3(moveAxis.x, 0, moveAxis.y);
 
+            // ==== 角色攻击 ====
             isAttack = Input.GetKeyDown(KeyCode.F);
 
+            // ==== 角色跳跃 ====
             isJump = Input.GetKeyDown(KeyCode.Space);
+
+            // ==== 相机旋转 ====
+            const int mouseRightButton = 1;
+            if (Input.GetMouseButton(mouseRightButton)) {
+                // delta = 当前帧坐标 - 上一帧坐标
+                cameraRotationAxis = Input.mousePositionDelta;
+            }
 
         }
 

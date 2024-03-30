@@ -35,6 +35,9 @@ namespace Zelda {
             bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity role);
             moduleCamera.Follow(role.transform.position, 2, 5);
 
+            // 摄像机旋转
+            moduleCamera.Rotate(ctx.input.cameraRotationAxis, dt);
+
         }
 
     }
