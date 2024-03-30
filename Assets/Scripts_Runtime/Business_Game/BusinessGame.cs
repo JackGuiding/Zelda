@@ -15,25 +15,8 @@ namespace Zelda {
 
             bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity owner);
 
-            Camera cam = ctx.moduleCamera.camera;
-            Quaternion quaternion = cam.transform.rotation;
-
-            Quaternion q = Quaternion.Euler(0, 90, 0); // 绕 y 轴旋转 90 度
-            Vector3 fwd2 = q * Vector3.forward; // (0, 0, 1) -> (1, 0, 0)
-            Debug.Log($"fwd2: {fwd2} right: {Vector3.right} ");
-
-            // 四元数 * Vector3 = 旋转后的 Vector3
-
-            Vector3 fwd = Vector3.forward; // (0, 0, 1)
-            fwd = quaternion * fwd;
-
-            Vector3 cameraFwd = cam.transform.forward;
-            // Debug.Log($"fwd: {fwd} cameraFwd: {cameraFwd}");
-
-            Vector3 moveDir = new Vector3(input.moveAxis.x, 0, input.moveAxis.y);
-            moveDir = quaternion * moveDir;
-            owner.Move(moveDir, fixdt);
-            owner.Face(moveDir, fixdt);
+            owner.Move(input.moveCameraDir, fixdt);
+            owner.Face(input.moveCameraDir, fixdt);
 
             // 通过射线检测地面
             // CheckGrounded();

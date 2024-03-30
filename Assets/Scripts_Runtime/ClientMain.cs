@@ -48,7 +48,7 @@ namespace Zelda {
             float dt = Time.deltaTime;
 
             // ==== Phase: Process Input ====
-            input.Process();
+            input.Process(moduleCamera.camera.transform.rotation);
 
             // ==== Phase: Logic ====
             float fixedDT = Time.fixedDeltaTime; // 0.02
