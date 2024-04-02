@@ -8,6 +8,10 @@ namespace Zelda {
 
         [SerializeField] Camera mainCamera;
 
+        [SerializeField] Canvas canvas;
+        [SerializeField] Panel_Login loginPrefab;
+
+        AppUI ui;
         ModuleInput input;
         ModuleAssets assets;
         ModuleCamera moduleCamera;
@@ -17,6 +21,8 @@ namespace Zelda {
         void Awake() {
 
             // ==== Phase: Instantiate ====
+            ui = new AppUI();
+
             input = new ModuleInput();
             assets = new ModuleAssets();
             moduleCamera = new ModuleCamera();
@@ -24,14 +30,26 @@ namespace Zelda {
             gameContext = new GameContext();
 
             // ==== Phase: Inject ====
+            ui.Inject(canvas, loginPrefab);
             moduleCamera.Inject(mainCamera);
             gameContext.Inject(input, assets, moduleCamera);
 
             // ==== Phase: Init ====
+            ui.Login_OnStartHandle = () => {
+
+                // 关闭 Login
+                ui.Login_Close();
+
+                // 进入游戏: 生成怪物、主角、场景
+                BusinessGame.Enter(gameContext);
+
+            };
+
             assets.Load();
 
             // ==== Phase: Enter Game ====
-            BusinessGame.Enter(gameContext);
+            ui.Login_Open();
+            // BusinessGame.Enter(gameContext);
 
             Application.targetFrameRate = 120;
 

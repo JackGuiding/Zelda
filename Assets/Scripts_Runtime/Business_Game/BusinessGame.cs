@@ -14,6 +14,9 @@ namespace Zelda {
             ModuleInput input = ctx.input;
 
             bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity owner);
+            if (!hasOwner) {
+                return;
+            }
 
             owner.Move(input.moveCameraDir, fixdt);
             owner.Face(input.moveCameraDir, fixdt);
@@ -37,8 +40,12 @@ namespace Zelda {
                 3. 再进阶: 绕(摇+移+跟+看), 希区柯克式运境, 效果(震屏)
             */
 
-            ModuleCamera moduleCamera = ctx.moduleCamera;
             bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity role);
+            if (!hasOwner) {
+                return;
+            }
+
+            ModuleCamera moduleCamera = ctx.moduleCamera;
 
             // 跟随
             // moduleCamera.Follow(role.transform.position, new Vector2(-3, 2), 5);
