@@ -18,7 +18,11 @@ namespace Zelda {
 
         GameContext gameContext;
 
+        bool isTearDown; // 是否已销毁
+
         void Awake() {
+
+            isTearDown = false;
 
             // ==== Phase: Instantiate ====
             ui = new AppUI();
@@ -100,6 +104,27 @@ namespace Zelda {
 
             // ==== Phase: Draw ====
             BusinessGame.LateTick(gameContext, dt);
+
+        }
+
+        // 当 安卓/iOS 应用程序退出时调用
+        void OnApplicationQuit() {
+            TearDown();
+        }
+
+        void OnDestroy() {
+            TearDown();
+        }
+
+        // 非官方生命周期
+        void TearDown() {
+
+            if (isTearDown) {
+                return;
+            }
+            isTearDown = true;
+
+            assets.Unload();
 
         }
 
