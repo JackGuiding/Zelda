@@ -8,8 +8,10 @@ namespace Zelda {
 
         [SerializeField] Camera mainCamera;
 
-        [SerializeField] Canvas canvas;
+        [SerializeField] Canvas screenCanvas;
+        [SerializeField] Canvas worldCanvas;
         [SerializeField] Panel_Login loginPrefab;
+        [SerializeField] HUD_HpBar hpBarPrefab;
 
         AppUI ui;
         ModuleInput input;
@@ -30,9 +32,9 @@ namespace Zelda {
             gameContext = new GameContext();
 
             // ==== Phase: Inject ====
-            ui.Inject(canvas, loginPrefab);
+            ui.Inject(screenCanvas, worldCanvas, loginPrefab, hpBarPrefab);
             moduleCamera.Inject(mainCamera);
-            gameContext.Inject(input, assets, moduleCamera);
+            gameContext.Inject(ui, input, assets, moduleCamera);
 
             // ==== Phase: Init ====
             ui.Login_OnStartHandle = () => {

@@ -4,6 +4,7 @@ namespace Zelda {
 
         public int ownerRoleID;
 
+        public AppUI ui;
         public ModuleAssets assets;
         public ModuleInput input;
         public ModuleCamera moduleCamera;
@@ -14,7 +15,8 @@ namespace Zelda {
             roleRepository = new RoleRepository();
         }
 
-        public void Inject(ModuleInput input, ModuleAssets assets, ModuleCamera moduleCamera) {
+        public void Inject(AppUI ui, ModuleInput input, ModuleAssets assets, ModuleCamera moduleCamera) {
+            this.ui = ui;
             this.input = input;
             this.assets = assets;
             this.moduleCamera = moduleCamera;

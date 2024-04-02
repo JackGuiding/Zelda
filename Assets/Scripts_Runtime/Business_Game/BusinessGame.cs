@@ -5,8 +5,10 @@ namespace Zelda {
     public static class BusinessGame {
 
         public static void Enter(GameContext ctx) {
+
             RoleEntity owner = RoleDomain.Spawn(ctx, 0);
             ctx.ownerRoleID = owner.id;
+
         }
 
         public static void FixedTick(GameContext ctx, float fixdt) {
@@ -60,6 +62,11 @@ namespace Zelda {
             // 绕
             // 注: 绕会影响`看向`和`跟随`
             moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 15, dt);
+
+            /*
+                UI: Panel & HUD
+            */
+            RoleDomain.UpdateHUD(ctx, role, moduleCamera.camera.transform.forward);
 
         }
 

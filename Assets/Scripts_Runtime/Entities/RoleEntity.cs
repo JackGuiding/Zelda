@@ -11,6 +11,9 @@ namespace Zelda {
 
         public int id;
 
+        public float hp;
+        public float hpMax;
+
         [SerializeField] Rigidbody rb;
         [SerializeField] Transform bodyTF;
         [SerializeField] Animator anim;
