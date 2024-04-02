@@ -48,11 +48,11 @@ namespace Zelda {
             // moduleCamera.LookAt(role.transform.position);
 
             // 单纯旋转
-            moduleCamera.Rotate(ctx.input.cameraRotationAxis, dt);
+            // moduleCamera.Rotate(ctx.input.cameraRotationAxis, dt);
 
             // 绕
             // 注: 绕会影响`看向`和`跟随`
-            // moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 5, dt);
+            moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 5, dt);
 
         }
 
