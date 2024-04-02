@@ -6,7 +6,7 @@ namespace Zelda {
 
     public class AppUI {
 
-        Dictionary<string, GameObject> prefabDict;
+        ModuleAssets assets;
 
         Canvas screenCanvas;
         Canvas worldCanvas;
@@ -17,18 +17,13 @@ namespace Zelda {
         public Action Login_OnStartHandle;
 
         public AppUI() {
-            prefabDict = new Dictionary<string, GameObject>();
             hpBars = new Dictionary<int, HUD_HpBar>();
         }
 
-        public void Inject(Canvas screenCanvas, Canvas worldCanvas, Panel_Login loginPrefab, HUD_HpBar hpBarPrefab) {
-
+        public void Inject(ModuleAssets assets, Canvas screenCanvas, Canvas worldCanvas) {
+            this.assets = assets;
             this.screenCanvas = screenCanvas;
             this.worldCanvas = worldCanvas;
-
-            prefabDict.Add(nameof(Panel_Login), loginPrefab.gameObject);
-            prefabDict.Add(nameof(HUD_HpBar), hpBarPrefab.gameObject);
-            // prefabDict.Add("Panel_Login", loginPrefab.gameObject);
         }
 
         // - Login
@@ -67,7 +62,7 @@ namespace Zelda {
 
         // 打开 UI
         GameObject Open(string uiName, Canvas canvas) {
-            bool has = prefabDict.TryGetValue(uiName, out GameObject prefab);
+            bool has = assets.TryGetUIPrefab(uiName, out GameObject prefab);
             if (!has) {
                 Debug.LogError($"UI: {uiName} not found.");
                 return null;
