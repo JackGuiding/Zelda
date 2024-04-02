@@ -59,7 +59,7 @@ namespace Zelda {
 
             // 绕
             // 注: 绕会影响`看向`和`跟随`
-            moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 5, dt);
+            moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 15, dt);
 
         }
 
