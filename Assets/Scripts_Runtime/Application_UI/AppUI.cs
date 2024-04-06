@@ -17,6 +17,8 @@ namespace Zelda {
 
         public Action Login_OnStartHandle;
 
+        public Action<int> Bag_OnUseHandle;
+
         public AppUI() {
             hpBars = new Dictionary<int, HUD_HpBar>();
         }
@@ -52,6 +54,9 @@ namespace Zelda {
                 GameObject go = Open(nameof(Panel_Bag), screenCanvas);
                 Panel_Bag panel = go.GetComponent<Panel_Bag>();
                 panel.Ctor();
+                panel.OnUseHandle = (int id) => {
+                    Bag_OnUseHandle.Invoke(id);
+                };
                 this.bag = panel;
             }
 

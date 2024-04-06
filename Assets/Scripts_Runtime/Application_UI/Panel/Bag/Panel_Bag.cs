@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ namespace Zelda {
 
         List<Panel_BagElement> elements;
 
+        public Action<int> OnUseHandle;
+
         public void Ctor() {
             elements = new List<Panel_BagElement>();
         }
@@ -20,9 +23,15 @@ namespace Zelda {
             // 生成空的背包格子
             for (int i = 0; i < maxSlot; i += 1) {
                 Panel_BagElement ele = GameObject.Instantiate(prefabElement, group.transform);
+                ele.Ctor();
                 ele.Init(-1, null, 0);
+                ele.OnUseHandle = OnUse;
                 elements.Add(ele);
             }
+        }
+
+        void OnUse(int id) {
+            OnUseHandle.Invoke(id);
         }
 
         public void Close() {
