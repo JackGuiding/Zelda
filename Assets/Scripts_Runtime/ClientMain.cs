@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Zelda {
 
@@ -46,6 +47,8 @@ namespace Zelda {
 
                 // 进入游戏: 生成怪物、主角、场景
                 BusinessGame.Enter(gameContext);
+
+                ui.Bag_Open(100);
 
             };
 

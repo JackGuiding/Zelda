@@ -852,8 +852,6 @@ MonoBehaviour:
   mainCamera: {fileID: 1271179680}
   screenCanvas: {fileID: 1881628161}
   worldCanvas: {fileID: 13449729}
-  loginPrefab: {fileID: 7237358406461334915, guid: 2eca0f4e84eec2e438c6dd3d5a346caa, type: 3}
-  hpBarPrefab: {fileID: 803949850205362041, guid: 949515e2843a1424fa350bb42624a592, type: 3}
 --- !u!1 &1271179678
 GameObject:
   m_ObjectHideFlags: 0

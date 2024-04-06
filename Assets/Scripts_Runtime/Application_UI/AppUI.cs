@@ -12,6 +12,7 @@ namespace Zelda {
         Canvas worldCanvas;
 
         Panel_Login login; // Unique 唯一
+        Panel_Bag bag;
         Dictionary<int /*EntityID*/, HUD_HpBar> hpBars;
 
         public Action Login_OnStartHandle;
@@ -43,6 +44,27 @@ namespace Zelda {
             login = null;
         }
         #endregion
+
+        // - Bag
+        // 打开背包时, 需要生成空格子
+        public void Bag_Open(int maxSlot) {
+            if (bag == null) {
+                GameObject go = Open(nameof(Panel_Bag), screenCanvas);
+                Panel_Bag panel = go.GetComponent<Panel_Bag>();
+                panel.Ctor();
+                this.bag = panel;
+            }
+
+            bag.Init(maxSlot);
+        }
+
+        public void Bag_Add(int id, Sprite icon, int count) {
+            bag?.Add(id, icon, count);
+        }
+
+        public void Bag_Close() {
+            bag?.Close();
+        }
 
         // - HpBar
         #region HUD_HpBar
