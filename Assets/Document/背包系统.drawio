@@ -4,13 +4,13 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="背包/物品逻辑" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="背包/物品逻辑&lt;br&gt;BagComponent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="160" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="UI 显示" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="UI 显示&lt;br&gt;Panel_Bag" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="365" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="UI&amp;nbsp;交互" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="4" value="UI&amp;nbsp;交互&lt;br&gt;Panel_Bag" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="570" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="6" target="2">

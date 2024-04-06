@@ -48,14 +48,6 @@ namespace Zelda {
                 // 进入游戏: 生成怪物、主角、场景
                 BusinessGame.Enter(gameContext);
 
-                ui.Bag_Open(100);
-                ui.Bag_OnUseHandle = (int id) => {
-                    Debug.Log("点击了: " + id);
-                };
-                for (int i = 0; i < 10; i += 1) {
-                    ui.Bag_Add(i, null, i + 1);
-                }
-
             };
 
             assets.Load();

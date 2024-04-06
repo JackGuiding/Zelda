@@ -12,6 +12,8 @@ namespace Zelda {
             int occupiedSlot = owner.bagCom.GetOccupiedSlot();
             Debug.Log("占用格子数: " + occupiedSlot);
 
+            BagDomain.Open(ctx, owner.bagCom);
+
         }
 
         public static void FixedTick(GameContext ctx, float fixdt) {

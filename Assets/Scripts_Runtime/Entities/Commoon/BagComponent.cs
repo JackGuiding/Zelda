@@ -66,6 +66,14 @@ namespace Zelda {
         // 移除物品
 
         // 遍历物品
+        public void ForEach(Action<BagItemModel> callback) {
+            for (int i = 0; i < all.Length; i += 1) {
+                BagItemModel item = all[i];
+                if (item != null) {
+                    callback.Invoke(item);
+                }
+            }
+        }
 
         public int GetMaxSlot() {
             return all.Length;

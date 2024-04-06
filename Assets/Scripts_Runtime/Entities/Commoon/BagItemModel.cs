@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Zelda {
 
     // 物品
@@ -8,6 +10,7 @@ namespace Zelda {
         public int typeID; // 100 木剑
         public string name;
         public string description;
+        public Sprite icon;
 
         // 数量
         public int count;
