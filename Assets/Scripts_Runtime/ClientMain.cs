@@ -40,6 +40,21 @@ namespace Zelda {
             gameContext.Inject(ui, input, assets, moduleCamera);
 
             // ==== Phase: Init ====
+            BindingEvent();
+
+            assets.Load();
+
+            // ==== Phase: Enter Game ====
+            ui.Login_Open();
+            // BusinessGame.Enter(gameContext);
+
+            Application.targetFrameRate = 120;
+
+        }
+
+        void BindingEvent() {
+
+            // - Login
             ui.Login_OnStartHandle = () => {
 
                 // 关闭 Login
@@ -50,13 +65,10 @@ namespace Zelda {
 
             };
 
-            assets.Load();
-
-            // ==== Phase: Enter Game ====
-            ui.Login_Open();
-            // BusinessGame.Enter(gameContext);
-
-            Application.targetFrameRate = 120;
+            // - Bag
+            ui.Bag_OnUseHandle = (int id) => {
+                BagDomain.OnOwnerUse(gameContext, id);
+            };
 
         }
 

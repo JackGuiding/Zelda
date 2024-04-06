@@ -25,10 +25,6 @@ namespace Zelda {
                 ui.Bag_Add(item.id, item.icon, item.count);
             });
 
-            ui.Bag_OnUseHandle = (int id) => {
-                Debug.Log("点击了: " + id);
-            };
-
         }
 
         public static void Update(GameContext ctx, BagComponent bag) {
@@ -36,6 +32,38 @@ namespace Zelda {
             if (ui.Bag_IsOpened()) {
                 ui.Bag_Close();
                 Open(ctx, bag);
+            }
+        }
+
+        public static void OnOwnerUse(GameContext ctx, int id) {
+            // 找到主角
+            bool has = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity owner);
+            if (!has) {
+                Debug.LogError("找不到主角: " + ctx.ownerRoleID);
+                return;
+            }
+
+            // 找到物品
+            has = owner.bagCom.TryGet(id, out BagItemModel item);
+            if (!has) {
+                Debug.LogError("找不到物品: " + id);
+                return;
+            }
+
+            // 使用物品
+            if (item.isEatable) {
+                RoleDomain.Attr_RestoreHp(ctx, owner, item.eatRestoreHp);
+                if (item.isConsumable) {
+
+                    item.count -= 1;
+                    if (item.count <= 0) {
+                        has = owner.bagCom.Remove(id);
+                    }
+
+                    // 刷新背包
+                    Update(ctx, owner.bagCom);
+
+                }
             }
         }
 

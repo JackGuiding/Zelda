@@ -16,6 +16,10 @@ namespace Zelda {
         public int count;
         public int countMax;
 
+        // CD
+        // public float cd;
+        // public float cdMax;
+
         // 特性(通用)
         public bool isConsumable; // 可消耗
 

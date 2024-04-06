@@ -86,8 +86,12 @@ namespace Zelda {
             hpBars.Add(id, hpBar);
         }
 
-        public void HpBar_UpdatePosition(int id, Vector3 position, Vector3 cameraForward) {
-            hpBars.TryGetValue(id, out HUD_HpBar hpBar);
+        public void HpBar_UpdatePosition(int id, float hp, float hpMax, Vector3 position, Vector3 cameraForward) {
+            bool has = hpBars.TryGetValue(id, out HUD_HpBar hpBar);
+            if (!has) {
+                return;
+            }
+            hpBar.SetHp(hp, hpMax);
             hpBar.SetPosition(position, cameraForward);
         }
         #endregion

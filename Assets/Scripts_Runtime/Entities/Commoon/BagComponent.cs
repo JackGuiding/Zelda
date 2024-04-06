@@ -63,8 +63,29 @@ namespace Zelda {
         }
 
         // 查找物品
+        public bool TryGet(int id, out BagItemModel item) {
+            for (int i = 0; i < all.Length; i += 1) {
+                BagItemModel model = all[i];
+                if (model != null && model.id == id) {
+                    item = model;
+                    return true;
+                }
+            }
+            item = null;
+            return false;
+        }
 
         // 移除物品
+        public bool Remove(int id) {
+            for (int i = 0; i < all.Length; i += 1) {
+                BagItemModel model = all[i];
+                if (model != null && model.id == id) {
+                    all[i] = null;
+                    return true;
+                }
+            }
+            return false;
+        }
 
         // 遍历物品
         public void ForEach(Action<BagItemModel> callback) {

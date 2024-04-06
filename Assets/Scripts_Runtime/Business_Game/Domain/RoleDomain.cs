@@ -8,6 +8,8 @@ namespace Zelda {
         public static RoleEntity Spawn(GameContext ctx, int typeID) {
 
             RoleEntity role = GameFactory.Role_Create(ctx.assets, ctx.idService, typeID);
+            role.hp = 50;
+            role.hpMax = 100;
 
             role.OnCollisionEnterHandle = OnCollisionEnter;
 
@@ -16,14 +18,22 @@ namespace Zelda {
             };
 
             // UI
-            ctx.ui.HpBar_Open(role.id, 8.1f, 10);
+            ctx.ui.HpBar_Open(role.id, role.hp, role.hpMax);
 
             ctx.roleRepository.Add(role);
             return role;
         }
 
+        public static void Attr_RestoreHp(GameContext ctx, RoleEntity role, int hpAddition) {
+            role.hp += hpAddition;
+            if (role.hp > role.hpMax) {
+                role.hp = role.hpMax;
+            }
+            Debug.Log("Role: " + role.id + " Hp: " + role.hp + "/" + role.hpMax);
+        }
+
         public static void UpdateHUD(GameContext ctx, RoleEntity role, Vector3 cameraForward) {
-            ctx.ui.HpBar_UpdatePosition(role.id, role.transform.position + Vector3.up * 2.3f, cameraForward);
+            ctx.ui.HpBar_UpdatePosition(role.id, role.hp, role.hpMax, role.transform.position + Vector3.up * 2.3f, cameraForward);
         }
 
         static void OnCollisionEnter(RoleEntity role, Collision other) {
@@ -43,6 +53,9 @@ namespace Zelda {
                     item.id = ctx.idService.itemIDRecord++;
                     item.typeID = loot.itemTypeID;
                     item.count = loot.itemCount;
+                    item.isConsumable = true;
+                    item.isEatable = true;
+                    item.eatRestoreHp = 30;
                     return item;
                 });
 
