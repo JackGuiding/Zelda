@@ -73,6 +73,7 @@ namespace Zelda {
 
         public void Bag_Close() {
             bag?.Close();
+            bag = null;
         }
 
         // - HpBar
