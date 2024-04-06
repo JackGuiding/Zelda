@@ -9,11 +9,6 @@ namespace Zelda {
             RoleEntity owner = RoleDomain.Spawn(ctx, 0);
             ctx.ownerRoleID = owner.id;
 
-            int occupiedSlot = owner.bagCom.GetOccupiedSlot();
-            Debug.Log("占用格子数: " + occupiedSlot);
-
-            BagDomain.Open(ctx, owner.bagCom);
-
         }
 
         public static void FixedTick(GameContext ctx, float fixdt) {
@@ -47,7 +42,7 @@ namespace Zelda {
                 3. 再进阶: 绕(摇+移+跟+看), 希区柯克式运境, 效果(震屏)
             */
 
-            bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity role);
+            bool hasOwner = ctx.roleRepository.TryGet(ctx.ownerRoleID, out RoleEntity owner);
             if (!hasOwner) {
                 return;
             }
@@ -66,12 +61,17 @@ namespace Zelda {
 
             // 绕
             // 注: 绕会影响`看向`和`跟随`
-            moduleCamera.Round(role.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 15, dt);
+            moduleCamera.Round(owner.transform.position, ctx.input.cameraRotationAxis, new Vector2(0, 0), 15, dt);
 
             /*
                 UI: Panel & HUD
             */
-            RoleDomain.UpdateHUD(ctx, role, moduleCamera.camera.transform.forward);
+            RoleDomain.UpdateHUD(ctx, owner, moduleCamera.camera.transform.forward);
+
+            ModuleInput input = ctx.input;
+            if (input.isUIToggleBag) {
+                BagDomain.Toggle(ctx, owner.bagCom);
+            }
 
         }
 

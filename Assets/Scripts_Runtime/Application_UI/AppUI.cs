@@ -67,6 +67,10 @@ namespace Zelda {
             bag?.Add(id, icon, count);
         }
 
+        public bool Bag_IsOpened() {
+            return bag != null;
+        }
+
         public void Bag_Close() {
             bag?.Close();
         }

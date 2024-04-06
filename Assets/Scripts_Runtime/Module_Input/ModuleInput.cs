@@ -9,7 +9,7 @@ namespace Zelda {
         public bool isAttack;
         public bool isJump;
 
-        public bool isUIOpenBag;
+        public bool isUIToggleBag;
 
         public Vector2 cameraRotationAxis;
 
@@ -50,7 +50,7 @@ namespace Zelda {
             }
 
             // ==== UI: Bag ====
-            isUIOpenBag = Input.GetKeyDown(KeyCode.B);
+            isUIToggleBag = Input.GetKeyDown(KeyCode.B);
 
         }
 
