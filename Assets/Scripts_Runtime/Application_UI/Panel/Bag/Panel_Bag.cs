@@ -36,7 +36,14 @@ namespace Zelda {
         }
 
         public void Add(int id, Sprite icon, int count) {
-
+            // 逻辑: 找到非-1的空格子, 设置内容
+            for (int i = 0; i < elements.Count; i += 1) {
+                Panel_BagElement ele = elements[i];
+                if (ele.id == -1) {
+                    ele.Init(id, icon, count);
+                    break;
+                }
+            }
         }
 
         public void Remove(int id) {
