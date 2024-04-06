@@ -9,6 +9,8 @@ namespace Zelda {
         public bool isAttack;
         public bool isJump;
 
+        public bool isUIOpenBag;
+
         public Vector2 cameraRotationAxis;
 
         public ModuleInput() { }
@@ -46,6 +48,9 @@ namespace Zelda {
                 // delta = 当前帧坐标 - 上一帧坐标
                 cameraRotationAxis = Input.mousePositionDelta;
             }
+
+            // ==== UI: Bag ====
+            isUIOpenBag = Input.GetKeyDown(KeyCode.B);
 
         }
 
