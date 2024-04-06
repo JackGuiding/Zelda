@@ -14,6 +14,8 @@ namespace Zelda {
         public float hp;
         public float hpMax;
 
+        public BagComponent bagCom;
+
         [SerializeField] Rigidbody rb;
         [SerializeField] Transform bodyTF;
         [SerializeField] Animator anim;
@@ -31,7 +33,13 @@ namespace Zelda {
 
         public Action<RoleEntity, Collision> OnCollisionEnterHandle;
 
-        public void Ctor() { }
+        public void Ctor() {
+            bagCom = new BagComponent();
+        }
+
+        public void Init(int bagMaxSlot) {
+            bagCom.Init(bagMaxSlot);
+        }
 
         public void Move(Vector3 moveAxis, float dt) {
             Move(moveAxis, speed, dt);

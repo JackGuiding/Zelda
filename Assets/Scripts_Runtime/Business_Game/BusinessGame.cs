@@ -9,6 +9,9 @@ namespace Zelda {
             RoleEntity owner = RoleDomain.Spawn(ctx, 0);
             ctx.ownerRoleID = owner.id;
 
+            int occupiedSlot = owner.bagCom.GetOccupiedSlot();
+            Debug.Log("占用格子数: " + occupiedSlot);
+
         }
 
         public static void FixedTick(GameContext ctx, float fixdt) {

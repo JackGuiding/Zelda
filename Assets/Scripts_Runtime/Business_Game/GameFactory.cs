@@ -12,7 +12,10 @@ namespace Zelda {
             }
 
             go = GameObject.Instantiate(go);
-            return go.GetComponent<RoleEntity>();
+            RoleEntity role = go.GetComponent<RoleEntity>();
+            role.Ctor();
+            role.Init(16);
+            return role;
         }
 
     }
