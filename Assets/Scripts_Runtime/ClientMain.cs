@@ -79,7 +79,7 @@ namespace Zelda {
             float fixedDT = Time.fixedDeltaTime; // 0.02
             restDT += dt; // 0.0083 (0.0000000001, 10)
             if (restDT >= fixedDT) {
-                while (restDT > 0) {
+                while (restDT >= fixedDT) {
                     restDT -= fixedDT;
                     FixedTick(fixedDT);
                 }
