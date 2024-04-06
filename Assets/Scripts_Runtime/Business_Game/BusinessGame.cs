@@ -9,6 +9,9 @@ namespace Zelda {
             RoleEntity owner = RoleDomain.Spawn(ctx, 0);
             ctx.ownerRoleID = owner.id;
 
+            LootEntity loot1 = LootDomain.Spawn(ctx, 1, 10, new Vector3(0, 0, 5));
+            LootEntity loot2 = LootDomain.Spawn(ctx, 2, 10, new Vector3(2, 0, -5));
+
         }
 
         public static void FixedTick(GameContext ctx, float fixdt) {

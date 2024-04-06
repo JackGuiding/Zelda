@@ -6,8 +6,10 @@ namespace Zelda {
     public static class RoleDomain {
 
         public static RoleEntity Spawn(GameContext ctx, int typeID) {
-            RoleEntity role = GameFactory.Role_Create(ctx.assets, typeID);
+
+            RoleEntity role = GameFactory.Role_Create(ctx.assets, ctx.idService, typeID);
             role.OnCollisionEnterHandle = OnCollisionEnter;
+            role.OnTriggerEnterHandle = OnTriggerEnter;
 
             // UI
             ctx.ui.HpBar_Open(role.id, 8.1f, 10);
@@ -23,6 +25,13 @@ namespace Zelda {
         static void OnCollisionEnter(RoleEntity role, Collision other) {
             if (other.gameObject.CompareTag("Ground")) {
                 role.SetGround(true);
+            }
+        }
+
+        static void OnTriggerEnter(RoleEntity role, Collider other) {
+            LootEntity loot = other.GetComponent<LootEntity>();
+            if (loot != null) {
+                Debug.Log("拾取了: " + loot.itemTypeID);
             }
         }
 

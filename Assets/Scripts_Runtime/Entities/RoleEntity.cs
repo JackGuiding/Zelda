@@ -32,6 +32,7 @@ namespace Zelda {
         public bool isGrounded;
 
         public Action<RoleEntity, Collision> OnCollisionEnterHandle;
+        public Action<RoleEntity, Collider> OnTriggerEnterHandle;
 
         public void Ctor() {
             bagCom = new BagComponent();
@@ -142,6 +143,7 @@ namespace Zelda {
 
         void OnTriggerEnter(Collider other) {
             // Debug.Log("OnTriggerEnter");
+            OnTriggerEnterHandle.Invoke(this, other);
         }
 
         void OnTriggerStay(Collider other) {
