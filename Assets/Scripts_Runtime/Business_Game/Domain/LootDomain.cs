@@ -10,5 +10,10 @@ namespace Zelda {
             return loot;
         }
 
+        public static void Unspawn(GameContext ctx, LootEntity loot) {
+            ctx.lootRepository.Remove(loot);
+            GameObject.Destroy(loot.gameObject);
+        }
+
     }
 }

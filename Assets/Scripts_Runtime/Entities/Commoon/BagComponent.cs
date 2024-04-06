@@ -53,7 +53,8 @@ namespace Zelda {
                 }
 
                 // 在空格子里添加新的物品, 并设置数量
-                all[index] = onAddItemToNewSlot.Invoke();
+                BagItemModel model = onAddItemToNewSlot.Invoke();
+                all[index] = model;
                 return true;
 
             } else {

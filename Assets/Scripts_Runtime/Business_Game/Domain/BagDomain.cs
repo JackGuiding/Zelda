@@ -31,5 +31,12 @@ namespace Zelda {
 
         }
 
+        public static void Update(GameContext ctx, BagComponent bag) {
+            var ui = ctx.ui;
+            if (ui.Bag_IsOpened()) {
+                Debug.Log("刷新背包");
+            }
+        }
+
     }
 }
